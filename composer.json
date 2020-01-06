@@ -1,0 +1,16 @@
+{
+    "name": "jabarihunt/CountryCodes",
+    "type": "library",
+    "description": "A simple class that returns country codes (or county name).",
+    "keywords": ["country code","UN"],
+    "homepage": "https://github.com/jabarihunt/country-codes",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Jabari J. Hunt",
+            "email": "jabari@jabari.net",
+            "homepage": "http://www.jabari.net",
+            "role": "Developer"
+        }
+    ],
+}
