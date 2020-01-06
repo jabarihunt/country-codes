@@ -396,8 +396,8 @@
                         {
                             $countries[] =
                             [
-                                self::CODE_TYPE_COUNTRY_NAME => str_replace("'", "\'", $data->name),
-                                self::CODE_TYPE_NATIVE_NAME  => str_replace("'", "\'", $data->nativeName),
+                                self::CODE_TYPE_COUNTRY_NAME => $data->name,
+                                self::CODE_TYPE_NATIVE_NAME  => $data->nativeName,
                                 self::CODE_TYPE_2_LETTER     => $data->alpha2Code,
                                 self::CODE_TYPE_3_LETTER     => $data->alpha3Code,
                                 self::CODE_TYPE_UN           => $data->numericCode
