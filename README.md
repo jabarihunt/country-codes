@@ -7,6 +7,8 @@ This is a simple class used to get country codes and/or names.  Normally this is
 2. Don't have proper permissions to add tables to a database
 3. Outside of a countries table, your application doesn't need a database
 
+**Requires PHP 7.0+** (*due to type definitions*)
+
 ## INSTALLING
 
 #### Via Composer
@@ -52,7 +54,7 @@ public const CountryCodes::CODE_TYPE_3_LETTER
 public const CountryCodes::CODE_TYPE_UN
 ```
 
-### Retrieving A Single Country
+### Retrieving Data For A Single Country
 
 Suppose we have a country name, *Haiti* for example, and we want the 3 letter country code.  We will use the `get()` method by passing it the type of value (country name in this case) along with the value itself.
 
@@ -79,13 +81,13 @@ array(5) {
 }
 ```
 
-As you can see, this method returns an array containing the country's official name, native name (*in it's native language*), 3 letter country code, 2 letter country code, and United Nations numeric code.  This will be the case regardless if the source is the hard coded class data or from an HTTP request to the [REST Countries API](https://restcountries.eu/), so the following would return the exact same output (*note the use of the third optional parameter*):
+As you can see, this method returns an array containing the country's official name, native name (*in it's native language*), 2 letter country code, 3 letter country code, and United Nations numeric code.  This will be the case regardless if the source is the hard coded class data or from an HTTP request to the [REST Countries API](https://restcountries.eu/).  The following would return the exact same output (*note the use of the third optional parameter*):
 
 `CountryCodes::get($countryCodeType, $countryName, TRUE)`
 
 > ***NOTE:*** Acknowledged country names are exactly as in the [REST Countries API](https://restcountries.eu/).  Most are straight forward as with "*Haiti*" in the example above.  However, some aren't so obvious, such as "*Venezuela (Bolivarian Republic of)*" rather than just "*Venezuela*"!
 
-The class can be used as a reverse lookup if you happened to have country code and wish to receive a country name (or other data point from the class).  The below example would return the exact same output as the one above:
+The class can be used as a reverse lookup if you happened to have a country code and wish to receive a country name (or other data point from the class).  The below example would return the exact same output as the one above:
 
 ```php
 <?php
@@ -104,7 +106,7 @@ There may be instances where you want to retrieve all country codes.  The below 
 ```php
 <?php
 
-    // RETURNS HARD CODED CLASS VALUES
+    // RETURN HARD CODED CLASS VALUES
     $allCountryCodes = CountryCodes::getAll(); 
     
     /* OR */
