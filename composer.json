@@ -1,5 +1,5 @@
 {
-    "name": "jabarihunt/CountryCodes",
+    "name": "jabarihunt/country-codes",
     "type": "library",
     "description": "A simple class that returns country codes (or county name).",
     "keywords": ["country code","UN"],
